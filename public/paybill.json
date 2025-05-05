@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "bill_type": "electricity",
+      "icon": "https://i.ibb.co.com/Cp09BYjd/electricity.jpg",
+      "organization": "DESCO",
+      "amount": 1890,
+      "due-date": "2025-03-22T06:57:58.110Z"
+    },
+    {
+      "id": 2,
+      "bill_type": "gas",
+      "icon": "htthttps://i.ibb.co.com/hxqHZxkd/gas.png",
+      "organization": "Tista",
+      "amount": 1488,
+      "due-date": "2025-03-28T06:57:58.110Z"
+    },
+    {
+      "id": 3,
+      "bill_type": "internet",
+      "icon": "https://i.ibb.co.com/ycVr50Gv/internet.jpg",
+      "organization": "Prime Bank",
+      "amount": 999,
+      "due-date": "2025-04-05T06:57:58.110Z"
+    },
+    {
+      "id": 4,
+      "bill_type": "water",
+      "icon": "https://i.ibb.co.com/RkCYJk3S/water.jpg",
+      "organization": "WASA",
+      "amount": 765,
+      "due-date": "2025-04-10T06:57:58.110Z"
+    }
+  ]
+  
