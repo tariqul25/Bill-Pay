@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { use } from 'react';
+import { PayContext } from '../Provider/PayProvider';
 
 const Profile = () => {
+    const {user}=use(PayContext)
+    // console.log(user.pho);
     return (
-        <div>
-            profile
+        <div className='mt-4 mb-16'>
+            <img className='w-16 mx-auto m-2' src={user?.photoURL} alt="" />
+            <p className='text-center text-3xl'>{user.displayName}</p>
+            <p className='text-center mt-2 font-bold'>{user.email}</p>
         </div>
     );
 };

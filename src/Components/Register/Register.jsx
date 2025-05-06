@@ -1,7 +1,7 @@
 import React, { use, useState } from 'react';
 import { PayContext } from '../../Provider/PayProvider';
 import { Link, Navigate, useNavigate } from 'react-router';
-import { sendEmailVerification } from 'firebase/auth';
+import { updateProfile } from 'firebase/auth';
 import { auth } from '../../Firebase/Firebase.config';
 
 const Register = () => {
@@ -16,11 +16,12 @@ const Register = () => {
     e.preventDefault();
     const name = e.target.name.value
     const email = e.target.email.value
+    const photoURL=e.target.photoUrl.value
     const password = e.target.password.value
     // console.log(name,email,password);
 
     setSuccess(false)
-    setErrorMessage('')
+    setErrorMessage('');
 
     const passRegex = /(?=.*[a-z])(?=.*[A-Z]).{6,}/;
     if (name.length < 6) {
@@ -33,19 +34,27 @@ const Register = () => {
 
 
 
-
-
-
-
     createUser(email, password).then((result) => {
-      sendEmailVerification(auth.currentUser)
-        .then(() => {
-          setSuccess(true)
-          alert('We send you a verification email. Please check your email')
-        });
+      // sendEmailVerification(auth.currentUser)
+      //   .then(() => {
+      //     setSuccess(true)
+      //     alert('We send you a verification email. Please check your email')
+      //   });
       // Signed up 
-      const user = result.user;
+      // const user = result.user;
       // console.log(user);
+
+      updateProfile(auth.currentUser,{
+        displayName: name,
+        photoURL: photoURL,
+      }).then(()=>{
+        console.log('profile updated');
+        console.log(auth.currentUser);
+      }).catch(error =>{
+        console.log(error);
+        setErrorMessage(error)
+      })
+
       navigate('/')
     })
       .catch((error) => {

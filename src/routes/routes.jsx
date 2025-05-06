@@ -6,6 +6,7 @@ import Login from "../Components/Signin/Signin";
 import Register from "../Components/Register/Register";
 import Profile from "../Profile/Profile";
 import PrivateRoute from "../Provider/PrivateRoute";
+import BillsDetails from "../Pages/BillsDetails";
 
 const router = createBrowserRouter([
     {
@@ -13,11 +14,20 @@ const router = createBrowserRouter([
      Component:Root,
       children:[{
         index:true,
-        Component:Home
+        Component:Home,
+        
       },
       {
         path:'/bills',
-        element: <PrivateRoute><Bills/></PrivateRoute>
+        element: <PrivateRoute><Bills/></PrivateRoute>,
+        // hydrateFallbackElement: <p>loading</p>,
+        loader: ()=>fetch('/paybill.json')        
+      },
+      {
+        path:'/bills/:id',
+        element: <PrivateRoute><BillsDetails/></PrivateRoute>,
+        // hydrateFallbackElement: <p>loading</p>,
+        loader: ()=>fetch('/paybill.json')        
       },
       {
         path:'/profile',
