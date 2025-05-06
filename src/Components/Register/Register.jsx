@@ -3,12 +3,13 @@ import { PayContext } from '../../Provider/PayProvider';
 import { Link, Navigate, useNavigate } from 'react-router';
 import { updateProfile } from 'firebase/auth';
 import { auth } from '../../Firebase/Firebase.config';
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const { createUser } = use(PayContext)
   const navigate = useNavigate()
   const [errorMessage, setErrorMessage] = useState('')
-  const [success, setSuccess] = useState(false)
+  // const [success, setSuccess] = useState(false)
 
 
 
@@ -20,7 +21,7 @@ const Register = () => {
     const password = e.target.password.value
     // console.log(name,email,password);
 
-    setSuccess(false)
+    // setSuccess(false)
     setErrorMessage('');
 
     const passRegex = /(?=.*[a-z])(?=.*[A-Z]).{6,}/;
@@ -48,7 +49,7 @@ const Register = () => {
         displayName: name,
         photoURL: photoURL,
       }).then(()=>{
-        console.log('profile updated');
+        toast.success('profile updated');
         console.log(auth.currentUser);
       }).catch(error =>{
         console.log(error);

@@ -1,9 +1,12 @@
 import React, { use } from 'react';
 import { PayContext } from '../Provider/PayProvider';
 import { Link } from 'react-router';
+import Loading from './Loading';
 
 const ProfDropDown = () => {
     const { user, SignOut,total,handleSignOut} = use(PayContext)
+        
+   
     
         return (
             <div>

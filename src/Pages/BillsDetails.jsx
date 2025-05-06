@@ -1,6 +1,7 @@
 import { use, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { PayContext } from '../Provider/PayProvider';
+import toast from 'react-hot-toast';
 
 const BillsDetails = () => {
     const {handlePayBill}=use(PayContext)
@@ -13,25 +14,26 @@ const BillsDetails = () => {
     console.log(singleBill);
     const { bill_type, icon, organization, amount, due_date } = singleBill
 
-    return <div className='px-9 w-7/12 bg-base-300 mx-auto rounded-2xl'>
+    return <div className='bg-base-300 rounded-md w-11/12 md:w-7/12  mx-auto'>
        <div className='flex items-center justify-center space-x-10 my-12 py-7 px-8'>
        <div>
             <img className='h-60 p-4 ' src={icon} alt="" />
         </div>
-        <div className='space-y-3'>
+        <div className='space-y-3 text-xs md:text-base'>
             <p>{organization}</p>
             <p>Type: {bill_type}</p>
-            <p>Payable: {amount} Tk</p>
-            <p>Due: {due_date}</p>
-            <div>
+            <p>Payable: {amount} </p>
+            <p className='text-xs md:text-base'>Due-Date: {due_date}</p>
+            <div className=''>
                 {
                     click? <button onClick={()=>{
-                      alert('already paid')
+                      toast.error('already paid')
                       return
                         // console.log(setClick);
-                    } } className='btn'>Pay Bill</button>  : <button onClick={()=>{
+                    } } className='btn '>Pay Bill</button>  : <button onClick={()=>{
                         handlePayBill(amount)
                         setClick(true)
+                        toast.success("Paid Successfully")
                         // console.log(setClick);
                     } } className='btn'>Pay Bill</button>
                 }

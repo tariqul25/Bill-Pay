@@ -13,12 +13,12 @@ const Bills = () => {
                             <div>
                                 <img className='w-30' src={bill.icon} alt="" />
                             </div>
-                            <div className='grid grid-cols-5 flex-1 items-center text-center '>
+                            <div className='grid grid-cols-2 md:grid-cols-5 flex-1 items-center text-center '>
                                 <p>{bill.organization}</p>
                                 <p>{bill.bill_type}</p>
                                 <p>Amount: {bill.amount}</p>
-                                <p>Due-date: {bill.due_date}</p>
-                                <div className='flex justify-center'>
+                                <p className='text-sm md:text-base'>Due-date: {bill.due_date}</p>
+                                <div className='flex justify-center items-center col-span-2 md:col-span-1'>
                                     <Link to={`/bills/${bill.id}`}><button className='btn btn-error w-20'>Pay</button></Link>
                                 </div>
                             </div>
