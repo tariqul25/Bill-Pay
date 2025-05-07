@@ -9,7 +9,7 @@ const Register = () => {
   const { createUser } = use(PayContext)
   const navigate = useNavigate()
   const [errorMessage, setErrorMessage] = useState('')
-  // const [success, setSuccess] = useState(false)
+  const [success, setSuccess] = useState(false)
 
 
 
@@ -73,7 +73,7 @@ const Register = () => {
           <label className="label">Email</label>
           <input type="email" name='email' className="input" placeholder="Email" required />
           <label className="label">Photo-Url</label>
-          <input type="text" name='photoUrl' className="input py-2"  />
+          <input type="text" name='photoUrl' className="input py-2" placeholder='photoUrl' />
           <label className="label">Password</label>
           <input type="password" name='password' className="input" placeholder="Password" required />
           <button type='submit' className="btn btn-neutral w-full mt-4">Register</button>

@@ -27,7 +27,7 @@ return (
                 <label className="label">Name</label>
                 <input type="text" name='name' className="input" placeholder="Name" required />
                 <label className="label">Photo-Url</label>
-                <input type="text" name='photoUrl' className="input py-2" placeholder='Drop your photo url' required />
+                <input type="text" name='photoUrl' className="input py-2" placeholder='photoUrl' required />
                 <button type='submit' className="btn btn-neutral w-full mt-4">Update</button>
 
             </form>

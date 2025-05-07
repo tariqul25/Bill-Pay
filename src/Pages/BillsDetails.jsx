@@ -5,16 +5,16 @@ import toast from 'react-hot-toast';
 
 const BillsDetails = () => {
     const {handlePayBill}=use(PayContext)
-    console.log(handlePayBill);
+    // console.log(handlePayBill);
     const data = useLoaderData()
     const { id } = useParams()
     const [click,setClick]=useState(false)
     // console.log(typeof id);
     const singleBill = data.find(bill => bill.id === parseInt(id));
-    console.log(singleBill);
+    // console.log(singleBill);
     const { bill_type, icon, organization, amount, due_date } = singleBill
 
-    return <div className='bg-base-300 rounded-md w-11/12 md:w-7/12  mx-auto'>
+    return <div className='bg-blue-100 rounded-md w-11/12 md:w-7/12  mx-auto'>
        <div className='flex items-center justify-center space-x-10 my-12 py-7 px-8'>
        <div>
             <img className='h-60 p-4 ' src={icon} alt="" />
@@ -31,9 +31,9 @@ const BillsDetails = () => {
                       return
                         // console.log(setClick);
                     } } className='btn '>Pay Bill</button>  : <button onClick={()=>{
-                        handlePayBill(amount)
+                        handlePayBill(amount,id)
                         setClick(true)
-                        toast.success("Paid Successfully")
+                        
                         // console.log(setClick);
                     } } className='btn'>Pay Bill</button>
                 }

@@ -2,13 +2,13 @@ import { Link, useLoaderData } from 'react-router';
 
 const Bills = () => {
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
     return (
         <div>
             <p className='text-center text-3xl font-bold'>My Bills</p>
             {
                 data.map((bill) => {
-                    return <div className='bg-base-300 my-8 rounded-xl'>
+                    return <div className='bg-base-100 my-8 rounded-xl'>
                         <div className='flex py-4 px-4  mb-4'>
                             <div>
                                 <img className='w-30' src={bill.icon} alt="" />
