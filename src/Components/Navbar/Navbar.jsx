@@ -12,8 +12,11 @@ const links = <>
 </>
 
 const Navbar = () => {
-    const { user, SignOut,handleSignOut } = use(PayContext)
+    const { user, SignOut,handleSignOut,loading } = use(PayContext)
 
+    if(loading){
+        return <Loading></Loading>;
+    }
     // console.log(user);
     return (
         <div className=" bg-blue-50 shadow-sm">

@@ -1,35 +1,38 @@
 [
-    {
-      "id": 1,
-      "bill_type": "electricity",
-      "icon": "https://i.ibb.co.com/wN4LVkhR/desco.jpg",
-      "organization": "DESCO",
-      "amount": 1890,
-      "due_date": "2025-05-22"
-    },
-    {
-      "id": 2,
-      "bill_type": "gas",
-      "icon": "https://i.ibb.co.com/hF68HsfV/tista.png",
-      "organization": "Tista",
-      "amount": 1488,
-      "due_date": "2025-05-28"
-    },
-    {
-      "id": 3,
-      "bill_type": "internet",
-      "icon": "https://i.ibb.co.com/RpGwZkb5/prime-bank.png",
-      "organization": "Prime Bank",
-      "amount": 999,
-      "due_date": "2025-05-05"
-    },
-    {
-      "id": 4,
-      "bill_type": "water",
-      "icon": "https://i.ibb.co.com/B088gsg/wasa.png",
-      "organization": "WASA",
-      "amount": 765,
-      "due_date": "2025-05-10"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/wN4LVkhR/desco.jpg",
+    "organization": "DESCO",
+    "amount": 1890,
+    "due_date": "2025-05-22",
+    "mini_icon": "https://i.ibb.co.com/k2V6jkvN/electricity-removebg-preview.png"
+  },
+  {
+    "id": 2,
+    "bill_type": "gas",
+    "icon": "https://i.ibb.co.com/hF68HsfV/tista.png",
+    "organization": "Tista",
+    "amount": 1488,
+    "due_date": "2025-05-28",
+    "mini_icon": "https://i.ibb.co.com/QF9dwmxK/gas-removebg-preview.png"
+  },
+  {
+    "id": 3,
+    "bill_type": "internet",
+    "icon": "https://i.ibb.co.com/RpGwZkb5/prime-bank.png",
+    "organization": "Prime Bank",
+    "amount": 999,
+    "due_date": "2025-05-05",
+    "mini_icon": "https://i.ibb.co.com/3Ydf1tkm/internet-removebg-preview.png"
+  },
+  {
+    "id": 4,
+    "bill_type": "water",
+    "icon": "https://i.ibb.co.com/B088gsg/wasa.png",
+    "organization": "WASA",
+    "amount": 765,
+    "due_date": "2025-05-10",
+    "mini_icon": "https://i.ibb.co.com/ns2PyMsd/water-removebg-preview.png"
+  }
+]

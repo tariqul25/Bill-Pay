@@ -14,7 +14,7 @@ import {Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='py-2 rouded-md'>
 
             <Swiper
         spaceBetween={30}
@@ -31,21 +31,21 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide className=''>
-            <img className='h-80 w-full' src='img1.jpg' alt="" />
+            <img className='h-80 w-full' src='image1.png' alt="" />
         
         </SwiperSlide>
         <SwiperSlide>
-            <img className='h-80 w-full' src='img2.jpg' alt="" />
+            <img className='h-80 w-full' src='image2.png' alt="" />
         
         </SwiperSlide>
         <SwiperSlide>
         <SwiperSlide>
-   <img className="h-80 w-full" src="img3.jpg" alt="" />
+   <img className="h-80 w-full" src="image3.png" alt="" />
 </SwiperSlide>
 
         </SwiperSlide>
         <SwiperSlide>
-        <img className='h-80 w-full' src='img4.jpg' alt="" />
+        <img className='h-80 w-full' src='image4.png' alt="" />
         </SwiperSlide>
       </Swiper>
 
