@@ -4,7 +4,7 @@
 **EasyPayBD** is a web-based bill management platform that allows users to conveniently pay various types of bills through their preferred accounts. It simplifies daily life by saving time and offering a hassle-free digital solution for bill payments.
 
 ## 🌐 Live URL
-
+https://easypaybd.netlify.app/
 
 
 ## 🎯 Project Purpose
