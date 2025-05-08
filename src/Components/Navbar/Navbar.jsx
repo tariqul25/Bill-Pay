@@ -12,9 +12,9 @@ const links = <>
 </>
 
 const Navbar = () => {
-    const { user, SignOut,handleSignOut,loading } = use(PayContext)
+    const { user, SignOut, handleSignOut, loading } = use(PayContext)
 
-    if(loading){
+    if (loading) {
         return <Loading></Loading>;
     }
     // console.log(user);
@@ -30,18 +30,23 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end ">
+                <div className="navbar-end">
                     {/* {user && <p className='mr-1'>{user.email}</p>} */}
                     <div>
                         {
-                            !user && <div className='gap-1  '>
-                        {user ? (<button onClick={handleSignOut} className="btn  ">SIgn Out</button>) : (<Link to='/login' className="btn btn-xs">SIgn In</Link>)}
-                        {!user && <Link to='/register' className="btn btn-xs ">Register</Link>}
-                    </div>
+                            !user && (
+                                <div className="flex gap-1">
+                                    {user ? (
+                                        <button onClick={handleSignOut} className="btn">Sign Out</button>
+                                    ) : (
+                                        <Link to="/login" className="btn btn-xs md:btn">Sign In</Link>
+                                    )}
+                                    <Link to="/register" className="btn btn-xs md:btn">Register</Link>
+                                </div>
+                            )
                         }
                     </div>
                     <ProfDropDown></ProfDropDown>
-
                 </div>
             </div>
         </div>

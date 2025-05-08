@@ -2,8 +2,10 @@ import React from 'react';
 
 const Accordion = () => {
     return (
-        <div className=''>
+        <div className='w-11/12 mx-auto mb-4'>
+             <h2 className='text-3xl font-bold text-center mb-2'>Frequently Asked Questtion</h2>
             <div className="collapse collapse-arrow bg-base-100 border border-base-300">
+               
   <input type="radio" name="my-accordion-2" />
   <div className="collapse-title font-semibold">What is EasyPayBD?</div>
   <div className="collapse-content text-sm">
