@@ -16,7 +16,8 @@ const router = createBrowserRouter([
      Component:Root,
       children:[{
         index:true,
-        Component: Home
+        Component: Home,
+        loader:()=>fetch('/paybill.json')  
       },
       {
         path:'/bills',

@@ -35,8 +35,8 @@ const Navbar = () => {
                     <div>
                         {
                             !user && <div className='gap-1  '>
-                        {user ? (<button onClick={handleSignOut} className="btn  ">SIgn Out</button>) : (<Link to='/login' className="btn ">SIgn In</Link>)}
-                        {!user && <Link to='/register' className="btn ">Register</Link>}
+                        {user ? (<button onClick={handleSignOut} className="btn  ">SIgn Out</button>) : (<Link to='/login' className="btn btn-xs">SIgn In</Link>)}
+                        {!user && <Link to='/register' className="btn btn-xs ">Register</Link>}
                     </div>
                         }
                     </div>

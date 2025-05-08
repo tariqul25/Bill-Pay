@@ -19,7 +19,7 @@ const ProfDropDown = () => {
                         className="w-full h-full object-cover"
                     />
                 )}</div>
-                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-16  text-xs md:text-base md:w-20 lg:w-26 lg:h-31 p-2 shadow-sm">
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-16  text-xs md:text-base md:w-20 lg:w-23 md:h-33 lg:h-34 p-2 shadow-sm">
                     <li><Link to='/profile' className='cursor-pointer'>Profile</Link></li>
                     <li><p>{total}</p></li>
                     <li><p onClick={handleSignOut} className=" md:text-base  md:h-9   cursor-pointer">Sign Out</p></li>
