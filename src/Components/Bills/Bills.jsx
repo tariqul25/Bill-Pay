@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link, useLoaderData } from 'react-router'; 
+import { PayContext } from '../../Provider/PayProvider'; 
 
 const Bills = () => {
     const data = useLoaderData();
-    const [selectedType, setSelectedType] = useState('All'); 
-  
+    const { paid } = useContext(PayContext); 
+
+    const [selectedType, setSelectedType] = useState('All');
+
     const billTypes = ['All'];
     const seenTypes = [];
 
@@ -16,12 +19,11 @@ const Bills = () => {
         }
     }
 
-    const [filteredData, setFilteredData] = useState(data); 
-
+    const [filteredData, setFilteredData] = useState(data);
 
     useEffect(() => {
         if (selectedType === 'All') {
-            setFilteredData(data); 
+            setFilteredData(data);
         } else {
             setFilteredData(data.filter(bill => bill.bill_type === selectedType));
         }
@@ -34,7 +36,7 @@ const Bills = () => {
             {/* Drop-down */}
             <div className='flex justify-center mb-6'>
                 <select
-                    className="select select-bordered w-20 max-w-xs"
+                    className="select select-bordered w-32 max-w-xs"
                     value={selectedType}
                     onChange={(e) => setSelectedType(e.target.value)}
                 >
@@ -47,26 +49,33 @@ const Bills = () => {
             </div>
 
             {
-                filteredData.map((bill) => (
-                    <div key={bill.id} className='bg-base-100 my-8 rounded-xl shadow-md'>
-                        <div className='flex py-4 px-4 mb-4'>
-                            <div>
-                                <img className='w-20' src={bill.icon} alt="" />
-                            </div>
-                            <div className='grid grid-cols-2 md:grid-cols-5 flex-1 items-center text-center gap-2'>
-                                <p>{bill.organization}</p>
-                                <p>{bill.bill_type}</p>
-                                <p>Amount: {bill.amount}</p>
-                                <p className='text-sm md:text-base'>Due-date: {bill.due_date}</p>
-                                <div className='flex justify-center items-center col-span-2 md:col-span-1'>
-                                    <Link to={`/bills/${bill.id}`}>
-                                        <button className='btn btn-error w-20'>Pay</button>
-                                    </Link>
+                filteredData.map((bill) => {
+                    const isPaid = paid.includes(bill.id); 
+
+                    return (
+                        <div key={bill.id} className='bg-base-100 my-8 rounded-xl shadow-md'>
+                            <div className='flex py-4 px-4 mb-4'>
+                                <div>
+                                    <img className='w-20' src={bill.icon} alt="" />
+                                </div>
+                                <div className='grid grid-cols-2 md:grid-cols-5 flex-1 items-center text-center gap-2'>
+                                    <p>{bill.organization}</p>
+                                    <p>{bill.bill_type}</p>
+                                    <p>Amount: {bill.amount}</p>
+                                    <p className='text-sm md:text-base'>Due-date: {bill.due_date}</p>
+                                    <div className='flex justify-center items-center col-span-2 md:col-span-1 gap-2'>
+                                        <Link to={`/bills/${bill.id}`}>
+                                            {
+                                                isPaid? <button className='btn btn-success btn-outline w-20 '> <span className="text-green-600 text-xl ">✅</span></button>:<button className='btn btn-error w-20 '>Pay</button>
+                                            }
+                                        </Link>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))
+                    );
+                })
             }
         </div>
     );

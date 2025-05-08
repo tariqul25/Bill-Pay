@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast';
 
 const Root = () => {
     return (
-        <div className='bg-blue-100'>
+        <div className='bg-gray-200'>
             <Toaster position='top-center'></Toaster>
             <Navbar></Navbar>
             <div className='w-11/12 mx-auto min-h-[calc(100vh-300px)]'>
