@@ -8,8 +8,8 @@
 
 ## 🔗 Live Preview & Repositories
 
-- 🌐 Live Site: [https://your-live-link.netlify.app](https://your-live-link.netlify.app)
-- 💻 GitHub Client Repo: [https://github.com/your-username/billEase](https://github.com/your-username/billEase)
+🌐 Live Site: [https://easypaybd.netlify.app](https://easypaybd.netlify.app)
+- 💻 GitHub Client Repo: [https://github.com/programming-hero-web-course1/b11a9-react-authentication-ImTariquL](https://github.com/programming-hero-web-course1/b11a9-react-authentication-ImTariquL)
 
 ---
 
