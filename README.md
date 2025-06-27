@@ -45,10 +45,9 @@ BillEase mimics a modern Bangladeshi mobile banking app where users can:
 
 ### Frontend:
 - React.js
-- React Router DOM
+- React Router 
 - Tailwind CSS
 - Firebase Authentication
-- SwiperJS (Slider)
 - React Icons
 - SweetAlert2
 - React Toastify
@@ -59,13 +58,12 @@ BillEase mimics a modern Bangladeshi mobile banking app where users can:
 
 ```json
 {
-  "react": "^18.x",
-  "react-dom": "^18.x",
-  "react-router-dom": "^6.x",
-  "firebase": "^11.x",
-  "swiper": "^9.x",
-  "react-icons": "^5.x",
-  "sweetalert2": "^11.x",
-  "react-toastify": "^9.x",
-  "tailwindcss": "^3.x"
+   "@tailwindcss/vite": "^4.1.5",
+    "firebase": "^11.6.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "react-router": "^7.5.3",
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.1.5"
 }
