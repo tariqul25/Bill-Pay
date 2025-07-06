@@ -9,7 +9,7 @@
 ## 🔗 Live Preview & Repositories
 
 🌐 Live Site: [https://easypaybd.netlify.app](https://easypaybd.netlify.app)
-- 💻 GitHub Client Repo: [https://github.com/programming-hero-web-course1/b11a9-react-authentication-ImTariquL](https://github.com/programming-hero-web-course1/b11a9-react-authentication-ImTariquL)
+- 💻 GitHub Client Repo: [https://github.com/tariqul25/Bill-Pay)
 
 ---
 
